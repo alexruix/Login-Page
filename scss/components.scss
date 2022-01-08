@@ -1,0 +1,403 @@
+@import "variables";
+::-webkit-scrollbar {
+  width: 20px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px $color5;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $hoverbg;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  &:active,
+  &:focus {
+    background: $pressbtn;
+  }
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $hoverbtn;
+}
+.bg {
+  // margin-top: -2%;
+  &--bg1 {
+    background-image: url("../img/bannerbg.webp");
+    background-position: top left;
+    background-size: cover;
+    margin-top: -64px;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &--bg2 {
+    background: $bg2color;
+    margin-bottom: -160px;
+  }
+
+  &--bg3 {
+    background: $bg3color;
+    // padding-top: -2%;
+  }
+
+  &--bg4 {
+    background: $bg4color;
+  }
+
+  &--bg5 {
+    background: $bg5color;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2em;
+
+  &--padding {
+    padding-top: calc(45em/5);
+    padding-bottom: calc(45em/4);
+  }
+
+  &--middlewidth {
+    width: 60%;
+  }
+
+  &--quarterwidth {
+    width: 45%;
+  }
+
+  &--img {
+    max-width: 450px;
+    height: 100%;
+    max-height: 580px;
+    position: relative;
+    width: 100%;
+    margin-top: 10%;
+  }
+}
+
+.text {
+  &--blue {
+    color: $color4;
+  }
+
+  &--underline {
+    position: relative;
+
+    &:hover {
+      color: $color3;
+
+      &::after {
+        width: 100%;
+        left: 0;
+      }
+    }
+
+    &::after {
+      content: ' ';
+      width: 100%;
+      height: 1px;
+      left: auto;
+      width: 0;
+      right: 0;
+      background: $color3;
+      position: absolute;
+      bottom: -5px;
+      transition: 0.3s ease-in-out;
+    }
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--gradient {
+    background: linear-gradient(to bottom, #00c6ff 30%, #0072ff 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__subtitle {
+    font-size: 2.5rem;
+    line-height: 1.3em;
+    @media screen and (max-width: 1000px) {
+      font-size: 2rem;
+    }
+
+    &--small {
+      
+      font-size: 25px;
+    }
+  }
+
+  &--font {
+    font-family: $sfont;
+    color: $color2;
+  }
+
+  &__title {
+    font-size: 63px;
+    letter-spacing: 0.05em;
+  }
+
+  &__spacing {
+    letter-spacing: 3px;
+  }
+
+  &__description {
+    font-size: 20px;
+    line-height: 1.6em;
+  }
+
+  &__card--title {
+    margin: 0;
+    font-size: 32px;
+    margin-top: 10%;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: $color4;
+    }
+  }
+}
+.button {
+  transition: color 0.3s ease-in-out, text-indent 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, transform 1s ease-in-out;
+  border-radius: $border;
+  font-size: 22px;
+  height: 55px;
+  letter-spacing: 0.8px;
+  color: inherit;
+  padding: 0 40px;
+  // width: 205px;
+  position: relative;
+  margin-top: 2%;
+
+
+  &:active,
+  &:focus {
+    background: $pressbtn;
+  }
+
+  &:hover {
+    text-indent: -20%;
+    box-shadow: $shadow;
+    background: $hoverbtn;
+  }
+
+  &__ppal,
+  &__secondary {
+    &:before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 55px;
+      content: '\f061';
+      font-family: "Font Awesome 6 Free";
+      font-size: 20px;
+      font-weight: 900;
+      line-height: inherit;
+      opacity: 0;
+      transition: all .3s ease-in-out;
+    }
+
+    &:hover {
+      &:before {
+        opacity: 1;
+        text-indent: 0;
+      }
+    }
+  }
+  &--form{
+    width: 100%;
+  }
+
+  &__mail {
+    width: 100%;
+    background: $hoverbg;
+    color: $color;
+    height: 110px;
+    padding: 1em 0;
+
+    &:hover {
+      text-indent: 0;
+      color: $color2;
+    }
+  }
+
+  &__text {
+    font-size: $border;
+    letter-spacing: 0.3px;
+    color: $bg1color;
+    width: 100px;
+    height: 0;
+
+    &:active,
+    &:focus,
+    &:hover {
+      box-shadow: none;
+      color: $color4;
+      background: none;
+
+      &:before {
+        opacity: 1;
+        text-indent: 0;
+      }
+    }
+
+    &:before {
+      position: absolute;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      content: '\f08e';
+      font-family: "Font Awesome 6 Free";
+      font-size: 14px;
+      font-weight: 900;
+      line-height: inherit;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &__ppal {
+    background: $hoverbg;
+    outline: 2px solid rgba($pressbtn, .3);
+
+    &:hover {
+      outline: 2px solid rgba($pressbtn, .3);
+    }
+  }
+
+  &__secondary {
+    outline: 2px solid $color4;
+    background: none;
+    color: $color4;
+
+    svg {
+      margin-top: -2%;
+      margin-right: 5%;
+      transition: transform 0.2s ease-in-out 0s;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $color4;
+      outline: 2px solid $color4;
+      background: none;
+
+      svg {
+        transform: translateX(-20%);
+      }
+    }
+  }
+
+  &__gray {
+    background: none;
+    color: #676767;
+    outline: 2px solid #818181;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background: none;
+      color: #676767;
+      outline: 2px solid #818181;
+      text-indent: 0;
+    }
+  }
+
+  &--left,
+  &--right {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    height: 50px;
+    width: 50px;
+    z-index: 2;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    box-shadow: $shadow2;
+    left: -25px;
+    border: none;
+    transition: all 0.3s ease-in;
+    background-color: $bg5color;
+    color: $color;
+    font-size: 20px;
+    font-weight: 900;
+
+    &:active,
+    &:focus,
+    &:hover {
+      -webkit-transform: scale(1.08);
+      transform: scale(1.08);
+      background-color: $bg2color;
+      box-shadow: $shadow3;
+    }
+  }
+
+  &--right {
+    right: -25px;
+    left: auto;
+  }
+}
+::placeholder {
+  color: $bg2color;
+}
+
+input[type=email]:not(.browser-default),
+input[type=text]:not(.browser-default),
+input[type=password]:not(.browser-default),
+input:not([type]),
+textarea {
+  outline: 2px solid $color3;
+  border: none;
+  width: 90%;
+  border-radius: 10px;
+  height: 2rem;
+  padding: 10px;
+  font-size: 16px;
+  color: $bg1color;
+}
+
+input[type=email]:focus,
+input[type=text]:focus,
+textarea:focus {
+  outline: 2px solid $color4;
+  color: $bg1color;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+  height: 100px;
+  border: 2px solid $color3;
+  padding: 15px 20px;
+  color: $bg1color;
+  outline: none;
+  transition: all 0.3s;
+
+  &:focus {
+    outline: none;
+    border-color: $color4;
+  }
+}
+@mixin buttonblue($background: $color3) {
+  background: $background;
+  box-shadow: $shadow2;
+  border-radius: $border;
+}
+.card__black {
+  @include buttonblue($bg2color);
+  padding: 3% 0;
+}
