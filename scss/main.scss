@@ -22,44 +22,60 @@ body {
   margin-top: 5%;
   width: 100%;
   flex-direction: column;
-  &-container{
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  width: 400px;
-  padding: 2% 5%;
-  justify-items: center;
-  @media screen and (max-width: 768px){
-    height: 100%;
+
+  &-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 400px;
+    padding: 2% 5%;
+    justify-items: center;
+    @media screen and (max-width: 768px) {
+      height: 100%;
+    }
   }
+
+  a {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: $fontsm;
+    text-decoration: none;
+    color: $color4;
+  }
+
+  & div {
+    @media screen and (max-width: 768px) {
+      justify-content: space-between;
+      height: 80%;
     }
-    a{
-      text-align: center;
-      margin-bottom: 24px;
-      font-size: $fontsm;
-      text-decoration: none;
-      color: $color4;
-    }
-    & div{
-      @media screen and (max-width: 768px){
-        justify-content: space-between;
-        height: 80%;
-      }
-    }
+  }
 }
-.logo{
+
+.logo {
   width: 150px;
   margin-bottom: 48px;
   justify-self: center;
   display: none;
   @media screen and (max-width: 768px) {
-        display: block;
+    display: block;
   }
 }
-.text{
+
+.text {
   font-weight: 200;
+  &__small{
+    font-size: $fontsm;
+  }
+  &__medium{
+    font-size: $fontmd;
+  }
+  &__large{
+    font-size: $fontlg;
+  }
 }
+
 .label {
   font-size: $fontsm;
+  color: $color;
   margin-bottom: 10px;
 }
 
@@ -70,7 +86,8 @@ body {
   font-size: $fontmd;
   padding: 6px;
 }
-input[type=submit]{
+
+input[type=submit] {
   cursor: pointer;
 }
 
@@ -90,30 +107,78 @@ input[type=submit]{
   &:hover {
     text-indent: 0;
   }
-  &__login{
-    background: $hoverbg;
 
+  &__login {
+    background: $hoverbg;
   }
-  &__secondary::before{
+
+  &__secondary::before {
     content: none;
- }
+  }
 }
 
 .bg--3 {
   background: $bg3color;
 }
 
-.img{
-    &-email{
-      width: 132px;
-      height: 132px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin: auto;
-      margin-bottom: 24px;
-    }
+.img {
+  &-email {
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto auto 24px;
+  }
 }
 
-.resend{
+.resend {
   font-size: $fontsm;
+}
+
+.value{
+  color: darkgrey;
+  font-size: $fontmd;
+  margin: 8px 0 32px;
+}
+.dissable{
+  color: darkgrey;
+  font-size: $fontmd;
+}
+
+.cards-container {
+  display: grid;
+  place-content: center;
+  gap: 5%;
+  grid-template-columns: repeat(auto-fill, 240px);
+  @media screen and (max-width: 640px) {
+    grid-template-columns: repeat(auto-fill, 140px);
+  }
+}
+
+.product {
+  &-cards img {
+    max-height: 100px;
+    border-radius: $border;
+  }
+
+  &-padding {
+    padding: 0 5%;
+  }
+}
+
+.icon {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  color: $color2;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+
+  &__shop {
+    background: $hoverbtn;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }

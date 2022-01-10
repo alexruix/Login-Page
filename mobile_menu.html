@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="scss/components.min.css">
+  <link rel="stylesheet" href="scss/universal.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="scss/main.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
+  <title>Mobile menu</title>
+
+<style media="screen">
+  .mobile-menu{
+    padding: 24px;
+  }
+   .mobile-menu ul:last-child{
+      position: absolute;
+      bottom: 0;
+  }
+  
+  a{
+    text-decoration: none;
+    font-width: bold;
+    margin-bottom: 24px;
+    display: inline-flex;
+  }
+  ul{
+    padding: 0;
+    margin: 24px 0 0;
+    list-style: none;
+  }
+  li{
+    margin-bottom: 24px;
+  }
+
+</style>
+</head>
+
+<body>
+  <div class="menu mobile-menu">
+    <ul class="text--font text__small">
+      <li>
+        <a href="#" class="text--font text__small">CATEGORIES</a>
+      </li>
+      <li>
+        <a href="#" class="text--font text__small">All</a>
+      </li>
+      <li>
+        <a href="#" class="text--font text__small">Clothes</a>
+      </li>
+      <li>
+        <a href="#" class="text--font text__small">Electronics</a>
+      </li>
+      <li>
+        <a href="#" class="text--font text__small">Furnitures</a>
+      </li>
+      <li>
+        <a href="#" class="text--font text__small">Others</a>
+      </li>
+    </ul>
+
+    <ul class="text--font text__small">
+      <li>
+        <a class="text--font text__small" href="#">My orders</a>
+      </li>
+      <li>
+        <a class="text--font text__small" href="#">My account</a>
+      </li>
+    </ul>
+
+    <ul class="text--font text__small">
+      <li>
+        <a class="dissable text--font text__small" href="#">hello@example.com</a>
+      </li>
+      <li>
+        <a class="sign-out text--font text__small" href="#">Sign out</a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

@@ -22,6 +22,12 @@
 ::-webkit-scrollbar-thumb:hover {
   background: $hoverbtn;
 }
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 .bg {
   // margin-top: -2%;
   &--bg1 {
@@ -394,7 +400,7 @@ textarea {
 }
 @mixin buttonblue($background: $color3) {
   background: $background;
-  box-shadow: $shadow2;
+  // box-shadow: $shadow2;
   border-radius: $border;
 }
 .card__black {
