@@ -190,30 +190,30 @@ ul{
   }
 
   &:hover {
-    text-indent: -20%;
+    // text-indent: -20%;
     box-shadow: $shadow;
     background: $hoverbtn;
   }
 
   &__ppal,
   &__secondary {
-    &:before {
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      width: 55px;
-      content: '\f061';
-      font-family: "Font Awesome 6 Free";
-      font-size: 20px;
-      font-weight: 900;
-      line-height: inherit;
-      opacity: 0;
-      transition: all .3s ease-in-out;
-    }
+    // &:before {
+    //   position: absolute;
+    //   top: 0;
+    //   right: 0;
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    //   height: 100%;
+    //   width: 55px;
+    //   content: '\f061';
+    //   font-family: "Font Awesome 6 Free";
+    //   font-size: 20px;
+    //   font-weight: 900;
+    //   line-height: inherit;
+    //   opacity: 0;
+    //   transition: all .3s ease-in-out;
+    // }
 
     &:hover {
       &:before {
